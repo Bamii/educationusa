@@ -1129,6 +1129,10 @@ main {
   }
 }
 
+#beneficiaries-section {
+  background: #F0EFEFB5;
+}
+
 #beneficiaries-section .beneficiaries-list {
   display: -webkit-box;
   display: -ms-flexbox;
