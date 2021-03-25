@@ -1,0 +1,175 @@
+@import "variables";
+
+header {
+  position: relative;
+
+  #top-strip-container {
+    width: 100%;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem;
+    color: black;
+    background: $gray-bg; 
+    position: fixed;
+
+    img.default-logo {
+      display: block;
+    }
+
+    img.white-logo {
+      display: none;
+    }
+
+    &.transparent {
+      @include minWidth($breakpoint-desktop) {
+        background: transparent;
+        color: white;
+  
+        // img.default-logo {
+        //   display: none !important;
+        // }
+  
+        // img.white-logo {
+        //   display: block !important;
+        // }
+      }
+    }
+
+    #top-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      #logo {
+        width: 50%;
+        height: auto;
+        padding: 1.5rem 0;
+        position: relative;
+
+        .main{
+          position: relative;
+          left: 0;
+          opacity: 1;
+        }
+
+        .icon{
+          width:110px;
+          height:110px;
+          bottom: -15px;
+          left: -35px;
+          opacity: 0.3;
+          position: absolute;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        @include minWidth($breakpoint-tablet) {
+          height: 6.8rem;
+          width: auto;
+
+          img {
+            height: 100%;
+            width: auto;
+          }
+        }
+      }
+
+      #mobile-menu-button {
+        display: flex;
+        cursor: pointer;
+
+        @include minWidth($breakpoint-desktop) {
+          display: none;
+        }
+      }
+
+      #navigation-wrapper {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+
+        @include minWidth($breakpoint-desktop) {
+          display: flex;
+        }
+
+        .menu-links {
+          display: none;
+          align-items: center;
+          padding: 1.2rem 0 1.5rem 0;
+
+          .menu-link {
+            display: inline-flex;
+            align-items: center;
+            margin-left: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            color: $primary-color;
+
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+
+          @include minWidth($breakpoint-desktop) {
+            display: inline-flex;
+          }
+        }
+
+        .extra-menu-links-wrapper {
+          padding: 1rem 0rem 0rem 0rem;
+
+          .extra-menu-links {
+            display: flex;
+            cursor: pointer;
+
+            .extra-menu-link {
+              display: inline-flex;
+              align-items: center;
+              margin-right: 1rem;
+              cursor: pointer;
+
+              &:last-child {
+                margin: 0;
+              }
+
+              .extra-menu-link-image {
+                height: 1.8rem;
+                width: 1.8rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+                background: #34657f;
+                margin-right: 0.5rem;
+
+                img {
+                }
+              }
+
+              .menu-text {
+                color: $secondary-color;
+              }
+
+              #internet-banking-button {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include minWidth($breakpoint-tablet) {
+      padding: 0 6rem;
+    }
+
+    @include minWidth($breakpoint-desktop) {
+      padding: 0 10rem;
+    }
+  }
+}

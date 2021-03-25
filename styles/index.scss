@@ -1,0 +1,360 @@
+@import "header";
+@import "footer";
+@import "common";
+@import "variables";
+
+main {
+  padding: 0;
+  max-width: unset;
+}
+
+#home-banner-section-wrapper {
+  max-width: unset;
+
+  #banner-section {
+   position: relative;
+   height: 100vh;
+   width: 100%;
+   background: #000000;
+   padding: 0;
+   max-width: unset;
+  
+   .banner-slides-container {
+    position: relative;
+    height: 100%;
+     
+    .banner-slides {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+  
+
+      [data-slide="0"] {
+        background-image: url(/assets/Banner_Images/construct.png) !important;
+      }
+
+      [data-slide="1"] {
+        background-image: url(/assets/Banner_Images/loan.png) !important;
+      }
+
+      [data-slide="2"] {
+        background-image: url(/assets/Banner_Images/Fixed_deposit.png) !important;
+      }
+      
+      [data-slide="3"] {
+        background-image: url(/assets/Banner_Images/Diaspora.png) !important;
+      }
+
+      .banner-slide-container {
+        width: 100vw;
+        height: 100%;
+        background-image: url(/assets/banner.png);
+        background-size: cover;
+        background-position: -35rem;
+        
+        @include minWidth($breakpoint-tablet) {
+          background-position: center;
+        }
+  
+        .banner-slide {
+          min-width: 100vw;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0 2rem;
+          background: rgba(16, 17, 20, 0.1);
+      
+          .banner-slide-description-container {
+            width: 100%;
+  
+            @keyframes display{
+              0%{
+                opacity: 0;
+              }
+              100%{
+                opacity: 1;
+              }
+            }
+      
+            @include minWidth($breakpoint-tablet) {
+              max-width: 50%;
+  
+              .banner-slide-description {
+                .leading-text {
+                  font-size: 3.5rem !important;
+                }
+        
+                .tagline {
+                  font-size: 1.4rem;
+                }
+              }
+            }
+            
+            .banner-slide-description {
+              height: 100%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              text-align: left;
+              justify-content: flex-start;
+              flex: 1;
+      
+              #banner-large-text {
+                color: $primary-color;
+              }
+
+              #banner-button:hover {
+                padding: 1rem 2.2rem;
+              }
+
+              span {
+                color: white;
+              }
+      
+              .leading-text {
+                font-size: 2rem;
+                line-height: 1.3;
+
+                @include minWidth($breakpoint-tablet) {
+                  font-size: 3rem;
+                }
+              }
+      
+              .tagline {
+                color: #4D4C4C;
+                font-size: 1.2rem;
+                padding: 1.5rem 0;
+              }
+            }
+          }
+            
+          @include minWidth($breakpoint-tablet) {
+            justify-content: space-between;   
+            flex-direction: row;
+            padding: 0 6rem;
+          }
+  
+          @include minWidth($breakpoint-desktop) {
+            flex-direction: row;
+            padding: 0 10rem; 
+          }
+        }
+      }
+    }
+  
+    .banner-slide-controls-container {
+      position: absolute;
+      right: 3vw;
+      bottom: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+  
+      @include minWidth($breakpoint-desktop) {
+        right: 10vw;
+      }
+  
+      #banner-slide-controls {
+        .slide-dot {
+          height: 1rem;
+          width: 1rem;
+          background: white;
+          border: 1px solid $gray-bg;
+          margin: 1rem;
+          cursor: pointer;
+  
+          &.selected  {
+            background: #E99F1E;
+          }
+        }
+      }
+    }
+   }
+  }
+}
+
+#about-us-section {
+  padding-top: 8rem;
+
+  @include minWidth($breakpoint-tablet) {
+    padding-bottom: 8rem;
+  }
+}
+
+#beneficiaries-section {
+  .beneficiaries-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+
+    .beneficiary {
+      padding: 2rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .beneficiary-image {
+        height: 12rem;
+        width: 12rem;
+        border: 1px solid black;
+        border-radius: 50%;
+      }
+
+      .beneficiary-name {
+        padding: 0.5rem 0;
+      }
+
+      .btn {
+        padding: 0;
+      }
+    }
+  }
+}
+
+#entertainment-section {
+  display: flex;
+  flex-direction: column;
+
+  @include minWidth($breakpoint-desktop) {
+    padding: 4rem 10rem;
+  }
+  
+  .section-header {
+    display: flex;
+    align-items: flex-end;
+
+    .top-accent-container {
+      flex: 1;
+      padding: 2rem 3rem;
+
+      .top-accent {
+        width: 60%;
+        margin: 1rem 0; 
+        border: 1px solid $secondary-color;
+      }
+    }
+
+  }
+
+  section {
+    align-items: flex-start;
+    padding: 0;
+
+    .right {
+      .video-container {
+        iframe {
+          box-shadow: 0px 0px 4px -1px #272727;
+          border-radius: 8px;
+          
+          &:hover {
+            box-shadow: 0px 0px 6px -1px #272727;
+          }
+        }
+      }
+    }
+
+    .master {
+      flex: 3;
+    }
+  }
+}
+
+.svg-group {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 35rem;
+
+  .svg-part {
+    width: 12rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .left-part {
+    height: 23rem;
+    background-image: url(/assets/Home_svg/left_image.jpg);
+    right: 0;
+    position: absolute;
+    left: 0;
+    border-radius: 0 0 15rem 15rem;
+    border: 2px solid $secondary-color;
+  }
+  
+  .middle-part {
+    height: 33rem;
+    background-image: url(/assets/Home_svg/middle_image.jpg);
+    background-position: center 4rem;
+    right: 0;
+    position: absolute;
+    left: 5rem;
+    z-index: 10;
+    border-radius: 0 0 15rem 15rem;
+    border: 2px solid $primary-color;
+  }
+  
+  .right-part {
+    height: 12rem;
+    background-image: url(/assets/Home_svg/right_image.jpg);
+    right: 0;
+    position: absolute;
+    left: 10rem;
+    top: 7rem;
+    border-radius: 50%;
+    border: 2px solid $gray-bg;
+  }
+  
+  @include minWidth($breakpoint-tablet) {
+    height: unset;
+    width: 25rem;
+
+    .svg-part {
+      width: 15rem;
+    }
+
+    .left-part {
+      left: -2rem;
+    }
+
+    .middle-part {
+      left: 5rem;
+    }
+
+    .right-part {
+      left: 11rem;
+      top: 6rem;
+      height: 15rem;
+    }
+  }
+  
+  @include minWidth($breakpoint-desktop) {
+    width: 40rem;
+    
+    .svg-part {
+      width: 17rem;
+    }
+
+    .left-part {
+      left: 4rem;
+    }
+
+    .middle-part {
+      left: 12rem;
+      width: 19rem;
+      background-position: center 5rem;
+    }
+
+    .right-part {
+      left: 22rem;
+    }
+  }
+}
