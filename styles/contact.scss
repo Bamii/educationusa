@@ -1,0 +1,40 @@
+@import "header";
+@import "footer";
+@import "common";
+@import "variables";
+
+#contact-section {
+  align-items: flex-start;
+
+  .row-half {
+    align-items: flex-start;
+
+    .header-text {
+      padding: 0.7rem 0;
+    }
+  }
+
+  .contact-details {
+    align-items: flex-start;
+    text-align: left;
+
+    .contact-description {
+      p {
+        line-height: 2;
+      }
+    }
+
+    .contact-info {
+      padding: 1rem 0;
+
+      .contact-info-entry {
+        padding: 0.8rem 0;
+        display: flex;
+
+        .contact-icon {
+          margin-right: 0.4rem;
+        }
+      }
+    }
+  }
+}

@@ -36,6 +36,10 @@ header {
       }
     }
 
+    &.white {
+      background: $gray-bg;
+    }
+
     #top-strip {
       display: flex;
       justify-content: space-between;
