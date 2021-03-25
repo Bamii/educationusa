@@ -43,7 +43,7 @@ header #top-strip-container #top-strip {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  padding-bottom: 0.8rem;
+  padding: 2rem 0;
 }
 
 header #top-strip-container #top-strip #logo {
@@ -214,6 +214,36 @@ header #top-strip-container #top-strip #navigation-wrapper .extra-menu-links-wra
   header #top-strip-container {
     padding: 0 10rem;
   }
+  header #top-strip-container #top-strip {
+    padding: 0 0 0.8rem 0;
+  }
+}
+
+header #menu-wrapper .mobile-menu-container {
+  padding: 8rem 2rem 2rem 2rem;
+  background: #F0EFEFB5;
+  width: 100%;
+}
+
+header #menu-wrapper .mobile-menu-container .mobile-menu-links {
+  text-align: center;
+}
+
+header #menu-wrapper .mobile-menu-container .mobile-menu-links .mobile-menu-link {
+  padding: 0.8rem 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #003865;
+}
+
+header #menu-wrapper .mobile-menu-container .mobile-menu-links .mobile-menu-link:visited {
+  color: #fff;
+}
+
+header #menu-wrapper .mobile-menu-container .mobile-menu-links .mobile-menu-link::after, header #menu-wrapper .mobile-menu-container .mobile-menu-links .mobile-menu-link::before {
+  content: "-";
+  color: #fff;
+  margin: 0 0.2rem;
 }
 
 footer {
@@ -731,14 +761,30 @@ section.split-row.reverse {
 
 #subscription form .input-container {
   padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-#subscription form input {
-  width: 60%;
+#subscription form .input-container input {
+  width: 100%;
   border: none;
   border-bottom: 2px solid #B98036;
-  margin: 0 1rem;
-  padding: 0 1rem;
+  margin: 1rem 0;
+  padding: 1rem 1.5rem;
+}
+
+@media screen and (min-width: 760px) {
+  #subscription form .input-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 #banner-container .banner {
@@ -893,13 +939,20 @@ main {
   overflow: hidden;
 }
 
+#home-banner-section-wrapper #banner-section .banner-slides-container .banner-slides .banner-position, #home-banner-section-wrapper #banner-section .banner-slides-container .banner-slides [data-slide="0"] {
+  background-size: cover;
+  background-position: center;
+}
+
 #home-banner-section-wrapper #banner-section .banner-slides-container .banner-slides [data-slide="0"] {
-  background-image: url(/assets/banner.png) !important;
+  background-image: url(/assets/banner.png);
 }
 
 #home-banner-section-wrapper #banner-section .banner-slides-container .banner-slides .banner-slide-container {
   width: 100vw;
   height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 #home-banner-section-wrapper #banner-section .banner-slides-container .banner-slides .banner-slide-container .banner-slide {

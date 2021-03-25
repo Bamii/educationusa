@@ -259,14 +259,21 @@ section.split-row {
 
     .input-container {
       padding: 3rem;
-    }
+      display: flex;
+      flex-direction: column;
 
-    input {
-      width: 60%;
-      border: none;
-      border-bottom: 2px solid #B98036;
-      margin: 0 1rem;
-      padding: 0 1rem;
+      input {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #B98036;
+        margin: 1rem 0;
+        padding: 1rem 1.5rem;
+      }
+
+      @include minWidth($breakpoint-tablet) {
+        flex-direction: row;
+        
+      }
     }
   }
 }

@@ -41,7 +41,7 @@ header {
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      padding-bottom: 0.8rem;
+      padding: 2rem 0;
 
       #logo {
         width: 50%;
@@ -178,6 +178,40 @@ header {
 
     @include minWidth($breakpoint-desktop) {
       padding: 0 10rem;
+
+      #top-strip {
+        padding: 0 0 0.8rem 0;
+      }
+    }
+  }
+
+  #menu-wrapper {
+    .mobile-menu-container {
+      padding: 8rem 2rem 2rem 2rem;
+      background: $transluscent-white;
+      width: 100%;
+
+      .mobile-menu-links {
+        text-align: center;
+
+        .mobile-menu-link {
+          padding: 0.8rem 0;
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          color: $primary-color;
+
+          &:visited {
+            color: $white;
+          }
+
+          &::after,
+          &::before {
+            content: "-";
+            color: $white;
+            margin: 0 0.2rem;
+          }
+        }
+      }
     }
   }
 }
