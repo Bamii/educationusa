@@ -591,6 +591,17 @@ section.split-row .row-half .row-contents .action-button {
   padding: 1.2rem 0;
 }
 
+div.split-row .left, div.split-row .right,
+section.split-row .left,
+section.split-row .right {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 div.split-row.reverse,
 section.split-row.reverse {
   -webkit-box-orient: vertical;
@@ -631,6 +642,9 @@ section.split-row.reverse {
         -ms-flex-order: 1;
             order: 1;
     text-align: right;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   div.split-row .right,
   section.split-row .right {
@@ -638,6 +652,9 @@ section.split-row.reverse {
         -ms-flex-order: 2;
             order: 2;
     text-align: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   div.split-row .right.master,
   section.split-row .right.master {
@@ -771,7 +788,9 @@ section.split-row.reverse {
 }
 
 #subscription form .input-container input {
-  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   border: none;
   border-bottom: 2px solid #B98036;
   margin: 1rem;
@@ -1243,6 +1262,10 @@ main {
   padding: 0;
 }
 
+#entertainment-section section .right .video-container {
+  width: 100%;
+}
+
 #entertainment-section section .right .video-container iframe {
   -webkit-box-shadow: 0px 0px 4px -1px #272727;
           box-shadow: 0px 0px 4px -1px #272727;
@@ -1269,8 +1292,57 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
-  height: 35rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.svg-group .main-image .top-right, .svg-group .main-image .bottom-right, .svg-group .main-image {
+  border: 2px solid black;
+  border-radius: 50%;
+  background: #C8102E;
+}
+
+.svg-group .main-image .top-right, .svg-group .main-image .bottom-right {
+  position: absolute;
+}
+
+.svg-group .main-image {
+  height: 15rem;
+  width: 15rem;
+}
+
+.svg-group .main-image .top-right {
+  height: 8rem;
+  width: 8rem;
+  top: -2rem;
+  right: -2rem;
+}
+
+.svg-group .main-image .bottom-right {
+  height: 6rem;
+  width: 6rem;
+  bottom: -1rem;
+  right: -1rem;
+}
+
+@media screen and (min-width: 760px) {
+  .svg-group .main-image {
+    height: 20rem;
+    width: 20rem;
+  }
+  .svg-group .main-image .top-right {
+    height: 12rem;
+    width: 12rem;
+    top: -4rem;
+    right: -4rem;
+  }
+  .svg-group .main-image .bottom-right {
+    height: 10rem;
+    width: 10rem;
+    bottom: -3rem;
+    right: -3rem;
+  }
 }
 
 .svg-group .svg-part {
@@ -1314,10 +1386,6 @@ main {
 }
 
 @media screen and (min-width: 760px) {
-  .svg-group {
-    height: unset;
-    width: 25rem;
-  }
   .svg-group .svg-part {
     width: 15rem;
   }
@@ -1335,9 +1403,6 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
-  .svg-group {
-    width: 40rem;
-  }
   .svg-group .svg-part {
     width: 17rem;
   }

@@ -116,6 +116,11 @@ section.split-row {
     }
   }
 
+  .left, .right {
+    align-items: center;
+    justify-content: center;
+  }
+
   &.reverse {
     flex-direction: column-reverse;
 
@@ -137,11 +142,13 @@ section.split-row {
     .left {
       order: 1;
       text-align: right;
+      align-items: center;
     }
 
     .right {
       order: 2;
       text-align: left;
+      align-items: center;
 
       &.master {
         flex: 1;
@@ -263,7 +270,7 @@ section.split-row {
       flex-direction: column;
 
       input {
-        width: 100%;
+        flex: 1;
         border: none;
         border-bottom: 2px solid #B98036;
         margin: 1rem;
@@ -272,7 +279,6 @@ section.split-row {
 
       @include minWidth($breakpoint-tablet) {
         flex-direction: row;
-        
       }
     }
   }
