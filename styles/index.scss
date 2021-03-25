@@ -188,7 +188,7 @@ main {
 #beneficiaries-section {
   .beneficiaries-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 3rem 0;
 
@@ -214,6 +214,10 @@ main {
         padding: 0;
       }
     }
+
+    @include minWidth($breakpoint-tablet) {
+      justify-content: space-between;
+    }
   }
 }
 
@@ -228,10 +232,12 @@ main {
   .section-header {
     display: flex;
     align-items: flex-end;
+    justify-content: center;
 
     .top-accent-container {
       flex: 1;
       padding: 2rem 3rem;
+      display: none;
 
       .top-accent {
         width: 60%;
@@ -240,6 +246,13 @@ main {
       }
     }
 
+    @include minWidth($breakpoint-tablet) {
+      justify-content: unset;
+
+      .top-accent-container {
+        display: block;
+      }
+    }
   }
 
   section {

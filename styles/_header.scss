@@ -10,7 +10,7 @@ header {
     justify-content: center;
     padding: 0 2rem;
     color: black;
-    background: $gray-bg; 
+    background: $transluscent-white; 
     position: fixed;
 
     img.default-logo {
@@ -25,7 +25,7 @@ header {
       @include minWidth($breakpoint-desktop) {
         background: transparent;
         color: white;
-  
+
         // img.default-logo {
         //   display: none !important;
         // }
@@ -41,11 +41,12 @@ header {
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      padding-bottom: 0.8rem;
 
       #logo {
         width: 50%;
         height: auto;
-        padding: 1.5rem 0;
+        // padding: 1.5rem 0;
         position: relative;
 
         .main{
@@ -69,7 +70,7 @@ header {
         }
 
         @include minWidth($breakpoint-tablet) {
-          height: 6.8rem;
+          // height: 6.8rem;
           width: auto;
 
           img {
@@ -100,18 +101,25 @@ header {
         .menu-links {
           display: none;
           align-items: center;
-          padding: 1.2rem 0 1.5rem 0;
+          // padding: 1.2rem 0 1.5rem 0;
 
           .menu-link {
+            padding: 2.4rem 1.2rem 1.5rem 1.2rem;
             display: inline-flex;
             align-items: center;
-            margin-left: 1.5rem;
+            margin-left: 1rem;
             cursor: pointer;
             font-weight: 600;
             color: $primary-color;
+            border-radius: 0 0 0.5rem 0.5rem;
 
             &:hover {
               color: $secondary-color;
+            }
+
+            &.selected {
+              background: $secondary-color;
+              color: $white;
             }
           }
 

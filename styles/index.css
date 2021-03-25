@@ -13,7 +13,7 @@ header #top-strip-container {
           justify-content: center;
   padding: 0 2rem;
   color: black;
-  background: #F0EFEF;
+  background: #F0EFEFB5;
   position: fixed;
 }
 
@@ -43,12 +43,12 @@ header #top-strip-container #top-strip {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  padding-bottom: 0.8rem;
 }
 
 header #top-strip-container #top-strip #logo {
   width: 50%;
   height: auto;
-  padding: 1.5rem 0;
   position: relative;
 }
 
@@ -74,7 +74,6 @@ header #top-strip-container #top-strip #logo img {
 
 @media screen and (min-width: 760px) {
   header #top-strip-container #top-strip #logo {
-    height: 6.8rem;
     width: auto;
   }
   header #top-strip-container #top-strip #logo img {
@@ -120,24 +119,30 @@ header #top-strip-container #top-strip #navigation-wrapper .menu-links {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1.2rem 0 1.5rem 0;
 }
 
 header #top-strip-container #top-strip #navigation-wrapper .menu-links .menu-link {
+  padding: 2.4rem 1.2rem 1.5rem 1.2rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   cursor: pointer;
   font-weight: 600;
   color: #003865;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 header #top-strip-container #top-strip #navigation-wrapper .menu-links .menu-link:hover {
   color: #C8102E;
+}
+
+header #top-strip-container #top-strip #navigation-wrapper .menu-links .menu-link.selected {
+  background: #C8102E;
+  color: #fff;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1092,9 +1097,9 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 3rem 0;
@@ -1130,6 +1135,14 @@ main {
   padding: 0;
 }
 
+@media screen and (min-width: 760px) {
+  #beneficiaries-section .beneficiaries-list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 #entertainment-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1153,6 +1166,9 @@ main {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #entertainment-section .section-header .top-accent-container {
@@ -1160,12 +1176,24 @@ main {
       -ms-flex: 1;
           flex: 1;
   padding: 2rem 3rem;
+  display: none;
 }
 
 #entertainment-section .section-header .top-accent-container .top-accent {
   width: 60%;
   margin: 1rem 0;
   border: 1px solid #C8102E;
+}
+
+@media screen and (min-width: 760px) {
+  #entertainment-section .section-header {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  #entertainment-section .section-header .top-accent-container {
+    display: block;
+  }
 }
 
 #entertainment-section section {
