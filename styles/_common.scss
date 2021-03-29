@@ -21,6 +21,21 @@ html {
 body {
   color: $font-color; 
   background: #FBFBFB;
+  line-height: 1.6;
+}
+
+.header-text {
+  font-family: 'PT Serif', serif;
+  text-transform: uppercase;
+
+  &.lowcase {
+    text-transform: capitalize;
+  }
+}
+
+%text-format {
+  padding: 0.5rem 0 1rem 0;
+  letter-spacing: -0.44px;
 }
 
 .small-text {
@@ -29,15 +44,10 @@ body {
   letter-spacing: 0.48px;
 }
 
-.header-text {
-  font-family: 'PT Serif', serif;
-}
-
 .large-text {
+  @extend %text-format;
   font-size: 2rem;
-  letter-spacing: -0.44px;
   font-weight: 600;
-  padding: 0.5rem 0 1rem 0;
 
   @include minWidth($breakpoint-tablet) {
     font-size: 2.5rem;
@@ -45,11 +55,12 @@ body {
 }
 
 .medium-text {
-  font-size: 1.5rem;
-  letter-spacing: -0.44px;
+  @extend %text-format;
+  font-size: 1.6rem;
 }
 
 .sub-text {
+  @extend %text-format;
   font-size: 1.2rem;
   line-height: 2.5rem;
 }
@@ -105,6 +116,11 @@ section.split-row {
       flex: 2;
     }
 
+    &.wider-master {
+      width: 100%;
+      flex: 3;
+    }
+
     .row-contents {
       display: flex;
       flex-direction: column;
@@ -150,9 +166,9 @@ section.split-row {
       text-align: left;
       align-items: center;
 
-      &.master {
-        flex: 1;
-      }
+      // &.master {
+      //   flex: 1;
+      // }
     }
 
     .row-half {

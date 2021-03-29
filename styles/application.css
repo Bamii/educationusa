@@ -948,42 +948,74 @@ section.split-row.reverse {
   display: initial;
 }
 
-#about-section .row-half {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+#application-section .application-tab-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-#about-section #about-tab .about-tabs {
-  width: 100%;
-}
-
-#about-section #about-tab .about-tabs .about-tab {
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 1.6rem 1.4rem;
-  border-radius: 0.5rem;
-  text-transform: uppercase;
+#application-section .application-tab-container .application-tab {
+  width: 50%;
+  margin: 0 0.5rem;
+  padding: 0.8rem;
   background: #F0EFEF;
-  border: 2px solid transparent;
-  color: #003865;
+  text-align: center;
   cursor: pointer;
+  font-size: small;
 }
 
-#about-section #about-tab .about-tabs .about-tab:hover {
-  border-color: #C8102E;
-  color: #C8102E;
+#application-section .application-tab-container .application-tab.selected {
+  background: #003865;
+  color: white;
 }
 
-#about-section #about-tab .about-tabs .about-tab.selected {
+@media screen and (min-width: 760px) {
+  #application-section .application-tab-container .application-tab {
+    font-size: unset;
+  }
+}
+
+#application-section .application-details-container {
+  margin: 2rem 0.5rem;
+  padding: 2rem;
+  background: #F0EFEF;
+}
+
+#application-section .application-details-container [data-tab-target] .apply-button {
+  width: 100%;
+  padding: 1rem 0;
   background: #C8102E;
   color: #F0EFEF;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
 }
 
-#about-section #about-tab-details [data-about-tab-details] {
-  display: none;
+#application-section .application-details-container .accented-text {
+  border-bottom: 1px solid #C8102E;
 }
 
-#about-section #about-tab-details [data-about-tab-details].selected {
-  display: block;
+#application-section .application-details-container .application-details {
+  margin: 2.5rem 0;
 }
-/*# sourceMappingURL=about.css.map */
+
+#application-section .application-details-container .application-details p {
+  margin: 1.5rem 0;
+  line-height: 1.8;
+}
+
+#application-section .application-details-container .application-details p.note {
+  font-weight: bold;
+}
+
+#application-section .application-details-container .application-details div span {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#application-section .application-details-container .application-details div ul {
+  list-style: square;
+  margin-left: 2rem;
+}
+/*# sourceMappingURL=application.css.map */

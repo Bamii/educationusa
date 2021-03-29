@@ -1,0 +1,7 @@
+[data-tab-target] {
+  display: none;
+
+  &.selected {
+    display: initial;
+  }
+}

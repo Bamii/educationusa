@@ -471,6 +471,21 @@ html {
 body {
   color: #333431;
   background: #FBFBFB;
+  line-height: 1.6;
+}
+
+.header-text {
+  font-family: 'PT Serif', serif;
+  text-transform: uppercase;
+}
+
+.header-text.lowcase {
+  text-transform: capitalize;
+}
+
+.large-text, .medium-text, .sub-text {
+  padding: 0.5rem 0 1rem 0;
+  letter-spacing: -0.44px;
 }
 
 .small-text {
@@ -479,15 +494,9 @@ body {
   letter-spacing: 0.48px;
 }
 
-.header-text {
-  font-family: 'PT Serif', serif;
-}
-
 .large-text {
   font-size: 2rem;
-  letter-spacing: -0.44px;
   font-weight: 600;
-  padding: 0.5rem 0 1rem 0;
 }
 
 @media screen and (min-width: 760px) {
@@ -497,8 +506,7 @@ body {
 }
 
 .medium-text {
-  font-size: 1.5rem;
-  letter-spacing: -0.44px;
+  font-size: 1.6rem;
 }
 
 .sub-text {
@@ -576,6 +584,14 @@ section.split-row .row-half.master {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
+}
+
+div.split-row .row-half.wider-master,
+section.split-row .row-half.wider-master {
+  width: 100%;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
 }
 
 div.split-row .row-half .row-contents,
@@ -659,12 +675,6 @@ section.split-row.reverse {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  div.split-row .right.master,
-  section.split-row .right.master {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
   }
   div.split-row .row-half,
   section.split-row .row-half {
@@ -1259,29 +1269,29 @@ main {
   }
 }
 
-#entertainment-section section {
+#entertainment-section .split-row {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 0;
 }
 
-#entertainment-section section .right .video-container {
+#entertainment-section .split-row .right .video-container {
   width: 100%;
 }
 
-#entertainment-section section .right .video-container iframe {
+#entertainment-section .split-row .right .video-container iframe {
   -webkit-box-shadow: 0px 0px 4px -1px #272727;
           box-shadow: 0px 0px 4px -1px #272727;
   border-radius: 8px;
 }
 
-#entertainment-section section .right .video-container iframe:hover {
+#entertainment-section .split-row .right .video-container iframe:hover {
   -webkit-box-shadow: 0px 0px 6px -1px #272727;
           box-shadow: 0px 0px 6px -1px #272727;
 }
 
-#entertainment-section section .master {
+#entertainment-section .split-row .master {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;

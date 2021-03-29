@@ -1,0 +1,78 @@
+@import "header";
+@import "footer";
+@import "common";
+@import "variables";
+@import "tabs";
+
+#application-section {
+  .application-tab-container {
+    width: 100%;
+    display: flex;
+
+    .application-tab {
+      width: 50%;
+      margin: 0 0.5rem;
+      padding: 0.8rem;
+      background: $gray-bg;
+      text-align: center;
+      cursor: pointer;
+      font-size: small;
+
+      &.selected {
+        background: $primary-color;
+        color: white;
+      }
+
+      @include minWidth($breakpoint-tablet) {
+        font-size: unset;
+      }
+    }
+  }
+
+  .application-details-container {
+    margin: 2rem 0.5rem;
+    padding: 2rem;
+    background: $gray-bg;
+
+    [data-tab-target] {
+      .apply-button {
+        width: 100%;
+        padding: 1rem 0;
+        background: $secondary-color;
+        color: $gray-bg;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight:  bold;
+      }
+    }
+
+    .accented-text {
+      border-bottom: 1px solid $secondary-color
+    }
+
+    .application-details {
+      margin: 2.5rem 0;
+
+      p {
+        margin: 1.5rem 0;
+        line-height: 1.8;
+
+        &.note {
+          font-weight: bold;
+        }
+      }
+
+      div {
+        span {
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+
+        ul {
+          list-style: square;
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+}

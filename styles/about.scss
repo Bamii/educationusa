@@ -2,4 +2,51 @@
 @import "footer";
 @import "common";
 @import "variables";
+@import "tabs";
 
+#about-section {
+  .row-half {
+    align-self: flex-start;
+  }
+
+  #about-tab {
+    .about-tabs {
+      width: 100%;
+
+      .about-tab {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 1.6rem 1.4rem;
+        border-radius: 0.5rem;
+        text-transform: uppercase;
+        background: $gray-bg;
+        border: 2px solid transparent;
+        color: $primary-color;
+        cursor: pointer;
+
+        &:hover {
+          border-color: $secondary-color;
+          color: $secondary-color;
+        }
+
+        &.selected {
+          background: $secondary-color;
+          color: $gray-bg;
+        }
+      }
+    }
+  }
+
+  #about-tab-details {
+    // background: black;
+
+    [data-about-tab-details] {
+      // line-height: 1.8;
+      display: none;
+
+      &.selected {
+        display: block;
+      }
+    }
+  }
+}
