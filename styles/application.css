@@ -578,20 +578,13 @@ section.split-row .row-half {
           flex-direction: column;
 }
 
-div.split-row .row-half.master,
-section.split-row .row-half.master {
+div.split-row .row-half.master, div.split-row .row-half.wider-master,
+section.split-row .row-half.master,
+section.split-row .row-half.wider-master {
   width: 100%;
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-}
-
-div.split-row .row-half.wider-master,
-section.split-row .row-half.wider-master {
-  width: 100%;
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
 }
 
 div.split-row .row-half .row-contents,
@@ -691,6 +684,12 @@ section.split-row.reverse {
   div.split-row .row-half,
   section.split-row .row-half {
     padding: 0 2rem;
+  }
+  div.split-row .row-half.wider-master,
+  section.split-row .row-half.wider-master {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
   }
 }
 
@@ -841,6 +840,12 @@ section.split-row.reverse {
           justify-content: center;
 }
 
+@media screen and (min-width: 760px) {
+  #banner-container .banner {
+    background-size: 110% 110%;
+  }
+}
+
 #banner-container .banner-text {
   padding: 1.5rem;
   text-align: center;
@@ -940,12 +945,24 @@ section.split-row.reverse {
   }
 }
 
+[data-tab] {
+  cursor: pointer;
+}
+
 [data-tab-target] {
   display: none;
 }
 
 [data-tab-target].selected {
-  display: initial;
+  display: block;
+}
+
+[data-form-step] {
+  display: none;
+}
+
+[data-form-step].active {
+  display: block;
 }
 
 #application-section .application-tab-container {
@@ -1017,5 +1034,181 @@ section.split-row.reverse {
 #application-section .application-details-container .application-details div ul {
   list-style: square;
   margin-left: 2rem;
+}
+
+#graduate-application-section,
+#undergraduate-application-section {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 760px) {
+  #graduate-application-section,
+  #undergraduate-application-section {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  #graduate-application-section .left div,
+  #undergraduate-application-section .left div {
+    max-width: 15rem;
+  }
+}
+
+#graduate-application-section .left div,
+#undergraduate-application-section .left div {
+  width: 100%;
+  text-align: center;
+}
+
+#graduate-application-section .left .applicant-image,
+#undergraduate-application-section .left .applicant-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+  background: #003865;
+  border-radius: 4px;
+}
+
+#graduate-application-section .left .applicant-image .image-display,
+#undergraduate-application-section .left .applicant-image .image-display {
+  height: 10rem;
+  width: 10rem;
+  background: #F0EFEF;
+  border-radius: 50%;
+}
+
+#graduate-application-section .left .applicant-image .upload-text,
+#undergraduate-application-section .left .applicant-image .upload-text {
+  text-align: center;
+  padding: 1rem 0;
+  background: #C8102E;
+  color: white;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+#graduate-application-section .left .download-doc,
+#undergraduate-application-section .left .download-doc {
+  padding: 1rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+  background: #003865;
+  color: #F0EFEF;
+}
+
+#graduate-application-section .left .application-tabs,
+#undergraduate-application-section .left .application-tabs {
+  margin: 1rem 0;
+  background: #F0EFEF;
+  border-radius: 4px;
+}
+
+#graduate-application-section .left .application-tabs .application-tab,
+#undergraduate-application-section .left .application-tabs .application-tab {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+#graduate-application-section .left .application-tabs .application-tab.selected,
+#undergraduate-application-section .left .application-tabs .application-tab.selected {
+  background: #C8102E;
+  color: white;
+}
+
+#graduate-application-section .left .application-tabs .application-tab:first-child,
+#undergraduate-application-section .left .application-tabs .application-tab:first-child {
+  border-radius: 4px 4px 0 0;
+}
+
+#graduate-application-section .left .application-tabs .application-tab:last-child,
+#undergraduate-application-section .left .application-tabs .application-tab:last-child {
+  border-radius: 0 0 4px 4px;
+}
+
+#graduate-application-section .right,
+#undergraduate-application-section .right {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#graduate-application-section .right .application-tab-targets,
+#undergraduate-application-section .right .application-tab-targets {
+  width: 100%;
+}
+
+#graduate-application-section .right .application-tab-targets .form-header,
+#undergraduate-application-section .right .application-tab-targets .form-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #C8102E;
+  color: #fff;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 4px 4px 0 0;
+}
+
+#graduate-application-section .right .application-tab-targets .form-header .form-nav-container,
+#undergraduate-application-section .right .application-tab-targets .form-header .form-nav-container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+#graduate-application-section .right .application-tab-targets .form-header .form-nav-container .form-nav,
+#undergraduate-application-section .right .application-tab-targets .form-header .form-nav-container .form-nav {
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+#graduate-application-section .right .application-tab-targets .form-body,
+#undergraduate-application-section .right .application-tab-targets .form-body {
+  padding: 2rem;
+  background: #F0EFEF;
+}
+
+#graduate-application-section .right .application-tab-targets .form-body .input-container,
+#undergraduate-application-section .right .application-tab-targets .form-body .input-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1.5rem 0;
+}
+
+#graduate-application-section .right .application-tab-targets .form-body .input-container label,
+#undergraduate-application-section .right .application-tab-targets .form-body .input-container label {
+  margin-bottom: 0.3rem;
+  font-weight: light;
+  text-transform: uppercase;
+}
+
+#graduate-application-section .right .application-tab-targets .form-body .input-container input,
+#undergraduate-application-section .right .application-tab-targets .form-body .input-container input {
+  padding: 1rem;
+  border: transparent;
+  border-radius: 4px;
+}
+
+#graduate-application-section .right .application-tab-targets .form-body .input-container input:focus,
+#undergraduate-application-section .right .application-tab-targets .form-body .input-container input:focus {
+  outline: #C8102E;
 }
 /*# sourceMappingURL=application.css.map */

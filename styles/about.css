@@ -578,20 +578,13 @@ section.split-row .row-half {
           flex-direction: column;
 }
 
-div.split-row .row-half.master,
-section.split-row .row-half.master {
+div.split-row .row-half.master, div.split-row .row-half.wider-master,
+section.split-row .row-half.master,
+section.split-row .row-half.wider-master {
   width: 100%;
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-}
-
-div.split-row .row-half.wider-master,
-section.split-row .row-half.wider-master {
-  width: 100%;
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
 }
 
 div.split-row .row-half .row-contents,
@@ -691,6 +684,12 @@ section.split-row.reverse {
   div.split-row .row-half,
   section.split-row .row-half {
     padding: 0 2rem;
+  }
+  div.split-row .row-half.wider-master,
+  section.split-row .row-half.wider-master {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
   }
 }
 
@@ -841,6 +840,12 @@ section.split-row.reverse {
           justify-content: center;
 }
 
+@media screen and (min-width: 760px) {
+  #banner-container .banner {
+    background-size: 110% 110%;
+  }
+}
+
 #banner-container .banner-text {
   padding: 1.5rem;
   text-align: center;
@@ -940,12 +945,16 @@ section.split-row.reverse {
   }
 }
 
+[data-tab] {
+  cursor: pointer;
+}
+
 [data-tab-target] {
   display: none;
 }
 
 [data-tab-target].selected {
-  display: initial;
+  display: block;
 }
 
 #about-section .row-half {
@@ -979,11 +988,21 @@ section.split-row.reverse {
   color: #F0EFEF;
 }
 
-#about-section #about-tab-details [data-about-tab-details] {
-  display: none;
+#about-section #about-tab-details .about-image {
+  width: 100%;
+  height: 250px;
+  background-image: url(/assets/about_banner.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
-#about-section #about-tab-details [data-about-tab-details].selected {
-  display: block;
+#about-section #about-tab-details .header-text {
+  padding: 2rem 0 0 0;
+  font-weight: bold;
+  color: #003865;
+}
+
+#about-section #about-tab-details .details-paragraph p {
+  padding: 0.8rem 0;
 }
 /*# sourceMappingURL=about.css.map */

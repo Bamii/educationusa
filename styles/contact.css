@@ -578,20 +578,13 @@ section.split-row .row-half {
           flex-direction: column;
 }
 
-div.split-row .row-half.master,
-section.split-row .row-half.master {
+div.split-row .row-half.master, div.split-row .row-half.wider-master,
+section.split-row .row-half.master,
+section.split-row .row-half.wider-master {
   width: 100%;
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-}
-
-div.split-row .row-half.wider-master,
-section.split-row .row-half.wider-master {
-  width: 100%;
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
 }
 
 div.split-row .row-half .row-contents,
@@ -691,6 +684,12 @@ section.split-row.reverse {
   div.split-row .row-half,
   section.split-row .row-half {
     padding: 0 2rem;
+  }
+  div.split-row .row-half.wider-master,
+  section.split-row .row-half.wider-master {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
   }
 }
 
@@ -839,6 +838,12 @@ section.split-row.reverse {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (min-width: 760px) {
+  #banner-container .banner {
+    background-size: 110% 110%;
+  }
 }
 
 #banner-container .banner-text {

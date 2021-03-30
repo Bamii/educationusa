@@ -3,6 +3,9 @@
 @import "common";
 @import "variables";
 @import "tabs";
+@import "form";
+
+$border-rad: 4px;
 
 #application-section {
   .application-tab-container {
@@ -74,5 +77,139 @@
         }
       }
     }
+  }
+}
+
+#graduate-application-section,
+#undergraduate-application-section {
+  align-items: center;
+
+  @include minWidth($breakpoint-tablet) {
+    align-items: flex-start;
+
+    .left {
+      div {
+        max-width: 15rem;
+      }
+    }
+  }
+
+  .left {
+    div {
+      width: 100%;
+      text-align: center;
+    }
+
+    .applicant-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 0;
+      background: $primary-color;
+      border-radius: $border-rad;
+  
+      .image-display {
+        height: 10rem;
+        width: 10rem;
+        background: $gray-bg;
+        border-radius: 50%;
+      }
+  
+      .upload-text {
+        text-align: center;
+        padding: 1rem 0;
+        background: $secondary-color;
+        color: white;
+        margin: 1rem 0;
+        cursor: pointer;
+      }
+    }
+  
+    .download-doc {
+      padding: 1rem;
+      margin: 2rem 0;
+      border-radius: $border-rad;
+      background: $primary-color;
+      color: $gray-bg;
+    }
+  
+    .application-tabs {
+      margin: 1rem 0;
+      background: $gray-bg;
+      border-radius: $border-rad;
+  
+      .application-tab {
+        padding: 1.5rem;
+        text-align: left;
+  
+        &.selected {
+          background: $secondary-color;
+          color: white;
+        }
+  
+        &:first-child {
+          border-radius: $border-rad $border-rad 0 0;
+        }
+  
+        &:last-child {
+          border-radius: 0 0 $border-rad $border-rad;
+        }
+      }
+    }
+  }
+
+  .right {
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .application-tab-targets {
+      width: 100%;
+
+      .form-header {
+        display: flex;
+        justify-content: space-between;
+        background: $secondary-color;
+        color: $white;
+        width: 100%;
+        padding: 1rem 2rem;
+        border-radius: 4px 4px 0 0;
+
+        .form-nav-container {
+          display: inline-flex;
+
+          .form-nav {
+            margin-left: 1rem;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .form-body {
+        padding: 2rem;
+        background: $gray-bg;
+
+        .input-container {
+          flex-direction: column;
+          padding: 1.5rem 0;
+          
+          label {
+            margin-bottom: 0.3rem;
+            font-weight: light;
+            text-transform: uppercase;
+          }
+
+          input {
+            padding: 1rem;
+            border: transparent;
+            border-radius: 4px;
+
+            &:focus {
+              outline: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+
   }
 }
