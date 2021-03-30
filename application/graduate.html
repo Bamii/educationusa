@@ -37,12 +37,16 @@
           <div id="navigation-wrapper">
             <div class="menu-links-wrapper">
               <div class="menu-links">
-                <div data-menu-index="0" class="menu-link">
-                  <a href="/index.html">Home</a>
-                </div>
-                <div data-menu-index="1" class="menu-link">
-                  <a href="/aboutUs.html">About Us</a>
-                </div>
+                <a href="/index.html">
+                  <div data-menu-index="0" class="menu-link">
+                    Home
+                  </div>
+                </a>
+                <a href="/aboutUs.html">
+                  <div data-menu-index="1" class="menu-link">
+                    About Us
+                  </div>
+                </a>
                 <div data-menu-index="2" class="menu-link">Scholars</div>
                 <div data-menu-index="3" class="menu-link">
                   Impact
@@ -50,10 +54,16 @@
                 <div data-menu-index="4" class="menu-link">
                   News
                 </div>
-                <div data-menu-index="5" class="menu-link selected">
-                  <a href="/application.html">Apply</a>
-                </div>
-                <div data-menu-index="6" class="menu-link"><a href="">Login</a></div>
+                <a href="/application.html">
+                  <div data-menu-index="5" class="menu-link selected">
+                    Apply
+                  </div>
+                </a>
+                <a href="#">
+                  <div data-menu-index="6" class="menu-link">
+                    Login
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -95,13 +105,197 @@
       </section>
 
       <div class="section-wrapper">
-        <section class="section-container split-row">
+        <section id="graduate-application-section" class="section-container split-row">
           <div class="row-half left">
-
+            <div class="applicant-image">
+              <div class="image-display"></div>
+              <div class="upload-text">Upload Pic</div>
+            </div>
+            <div class="download-doc">
+              Download Document
+            </div>
+            <div class="application-tabs">
+              <div data-tab="1" class="application-tab selected">
+                Personal Information
+              </div>
+              <div data-tab="2" class="application-tab">
+                Academic and School Info
+              </div>
+              <div data-tab="3" class="application-tab">
+                Review Application
+              </div>
+              <div data-tab="4" class="application-tab">
+                Submit
+              </div>
+              <div data-tab="5" class="application-tab">
+                Application Status
+              </div>
+            </div>
           </div>
           <div class="row-half right wider-master">
-            <div class="header-text medium-text">
+            <div class="header-text lowcase medium-text">
               Opportunity Funds Program (OFP) 2020 Application Form
+            </div>
+            <div class="application-tab-targets">
+              <div data-tab-target="1" class="application-tab-target selected">
+                <form id="graduate-form" data-form-staircase="1">
+                  <div class="form-header">
+                    <div class="title header-text">
+                      personal information
+                      <span id="form-page"></span>
+                    </div>
+                    <div class="form-nav-container">
+                      <div id="form-prev" class="form-nav">prev</div>
+                      <div id="form-next" class="form-nav">next</div>
+                    </div>
+                  </div>
+                  <div data-form-step="1" class="form-body">
+                    <div class="input-container">
+                      <label for="fullame">Full Name:</label>
+                      <input data-form-input type="text" name="fullname" class="">
+                    </div>
+                    <div class="input-container">
+                      <label for="nickname">What Name would you prefer to be called?</label>
+                      <input data-form-input type="text" name="nickname" class="">
+                    </div>
+                    <div class="input-container">
+                      <label for="address">Your Address:</label>
+                      <textarea data-form-input name="address" class=""> </textarea>
+                    </div>
+                    <div class="input-container">
+                      <label for="phone_number">Contact Phone Number :</label>
+                      <input data-form-input type="text" name="phone_number" class="">
+                    </div>
+                    <div class="input-container">
+                      <label for="email">Contact Email Address:</label>
+                      <input data-form-input type="text" name="email" class="">
+                    </div>
+                    <div class="input-container">
+                      <label for="dob">Date of Birth:</label>
+                      <input data-form-input type="date" name="dob" class="">
+                    </div>
+                    <div class="input-container">
+                      <label for="gender">Gender:</label>
+                      <input data-form-input type="text" name="gender" class="">
+                    </div>
+                    <div class="input-container">
+                      <label for="mother_occupation">Mother's current occupation and workplace, if living. (Be specific, even if self employed):</label>
+                      <input data-form-input type="text" name="mother_occupation" class="">
+                    </div>
+                    <div class="input-container">
+                      <label for="father_occupation">Fathers current occupation and workplace, if living. (Be specific, even if self employed):</label>
+                      <input data-form-input type="text" name="father_occupation" class="">
+                    </div>
+                    <div class="input-container">
+                      <label for="father_occupation">If parents are deceased, state name, relationship to you, occupation/workplace of your legal guardian:</label>
+                      <input data-form-input type="text" name="guardian_details" class="">
+                    </div>
+                  </div>
+                  <div data-form-step="2" class="form-body">
+                    <div class="input-container">
+                      <label for="siblings_details">Number of direct siblings, their ages, and for each one, state whether or not they are in university, which university and in what grade or form or level::</label>
+                      <textarea data-form-input type="text" name="siblings_details" class=""> </textarea>
+                    </div>
+                    <div class="input-container">
+                      <label for="other_dependants">Number of other dependent people currently living with and supported by your family and their relationships to you::</label>
+                      <textarea data-form-input type="text" name="other_dependants" class=""> </textarea>
+                    </div>
+                    <div class="input-container">
+                      <label for="university_fee">How much was your school fees in University (inclusive of housing) for Final school year:</label>
+                      <input data-form-input type="text" name="university_fee" class="">
+                    </div>
+                    <div class="input-container">
+                      <label for="university_fee_sponsor">Who paid your university fees?:</label>
+                      <input data-form-input type="text" name="university_fee_sponsor" class="">
+                    </div>
+                    <div class="input-container">
+                      <label for="relative_details">If your fees are paid by a relative other than your parents, how many other children’s fees are paid for by this same person? Do you live with this relative?</label>
+                      <input data-form-input type="text" name="relative_details" class="">
+                    </div>
+                    <div class="input-container">
+                      <label for="school_abscence">Have you or your siblings ever missed a significant part of a school term(s) because of finances or strike(s)? IF so, please explain:</label>
+                      <textarea data-form-input type="text" name="school_abscence" class=""> </textarea>
+                    </div>
+                    <div class="input-container">
+                      <label for="address_for_stay">
+                        <span class="accented-text">Question 17 is for those from outside of Lagos and Abuja area only</span> <br>
+                        17. If you live far from Lagos and Abuja, do you have someone you can stay with in Lagos or Abuja when you are attending OFP meetings or taking exams? Please state person's name, relationship to you, physical address and contact telephone number:
+                      </label>
+                      <input data-form-input type="text" name="address_for_stay" class="">
+                    </div>
+                  </div>
+                  <div data-form-step="3" class="form-body">
+                    <div class="input-container">
+                      <label for="other_details">18. What else should we know about your economic and personal background, your family and your financial situation? Feel free to use an extra page if this space is too small so we can truly understand your situation.</label>
+                      <textarea data-form-input type="text" name="other_details" class=""> </textarea>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div data-tab-target="2" class="application-tab-target">
+                <form id="undergraduate-form" data-form-staircase="2">
+                  <div class="form-header">
+                    <div class="title header-text">
+                      Academic and school info
+                      <span id="form-page"></span>
+                    </div>
+                    <div class="form-nav-container">
+                      <div id="form-prev" class="form-nav">prev</div>
+                      <div id="form-next" class="form-nav">next</div>
+                    </div>
+                  </div>
+                  <div data-form-step="1" class="form-body">
+                  </div>
+                </form>
+              </div>
+              <div data-tab-target="3" class="application-tab-target">
+                <form id="undergraduate-form" data-form-staircase="3">
+                  <div class="form-header">
+                    <div class="title header-text">
+                      review application
+                      <span id="form-page"></span>
+                    </div>
+                    <div class="form-nav-container">
+                      <div id="form-prev" class="form-nav">prev</div>
+                      <div id="form-next" class="form-nav">next</div>
+                    </div>
+                  </div>
+                  <div data-form-step="1" class="form-body">
+                  </div>
+                </form>
+              </div>
+              <div data-tab-target="4" class="application-tab-target">
+                <form id="undergraduate-form" data-form-staircase="4">
+                  <div class="form-header">
+                    <div class="title header-text">
+                      Submit Application
+                      <span id="form-page"></span>
+                    </div>
+                    <div class="form-nav-container">
+                      <div id="form-prev" class="form-nav">prev</div>
+                      <div id="form-next" class="form-nav">next</div>
+                    </div>
+                  </div>
+                  <div data-form-step="1" class="form-body">
+                  </div>
+                </form>
+              </div>
+              <div data-tab-target="5" class="application-tab-target">
+                <form id="undergraduate-form" data-form-staircase="5">
+                  <div class="form-header">
+                    <div class="title header-text">
+                      Application Status
+                      <span id="form-page"></span>
+                    </div>
+                    <div class="form-nav-container">
+                      <div id="form-prev" class="form-nav">prev</div>
+                      <div id="form-next" class="form-nav">next</div>
+                    </div>
+                  </div>
+                  <div data-form-step="1" class="form-body">
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </section>
@@ -191,6 +385,8 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script> -->
-    <script type="text/javascript" src="/javascript/index.js"></script>
+    <script type="text/javascript" src="/javascript/menu.js"></script>
+    <script type="text/javascript" src="/javascript/form.js"></script>
+    <script type="text/javascript" src="/javascript/tabs.js"></script>
   </body>
 </html>
