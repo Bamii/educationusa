@@ -178,6 +178,32 @@ main {
   @include minWidth($breakpoint-tablet) {
     padding-bottom: 8rem;
   }
+
+  .svg-group {
+    .main-image {
+      background-image: url(/assets/home_banner_1.png);
+
+      .top-right {
+        background-image: url(/assets/update_image.png);
+      }
+
+      .bottom-right {
+        background-image: url(/assets/update_image.png);
+      }
+    }
+  }
+}
+
+#impact-section {
+  .svg-group {
+    .main-image {
+      background-image: url(/assets/banner.png);
+
+      .top-right {
+        background-image: url(/assets/banner.png);
+      }
+    }
+  }
 }
 
 #beneficiaries-section {
@@ -372,7 +398,8 @@ main {
   %svg-image {
     border: 2px solid black;
     border-radius: 50%;
-    background: $secondary-color;
+    background-size: cover;
+    background-position: center;
   }
 
   %positioned-svg-image {

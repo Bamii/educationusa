@@ -786,6 +786,7 @@ section.split-row.reverse {
 }
 
 #subscription form .form-tagline {
+  font-size: 1.35rem;
   line-height: 1.5;
 }
 

@@ -786,6 +786,7 @@ section.split-row.reverse {
 }
 
 #subscription form .form-tagline {
+  font-size: 1.35rem;
   line-height: 1.5;
 }
 
@@ -1179,6 +1180,26 @@ main {
   }
 }
 
+#about-us-section .svg-group .main-image {
+  background-image: url(/assets/home_banner_1.png);
+}
+
+#about-us-section .svg-group .main-image .top-right {
+  background-image: url(/assets/update_image.png);
+}
+
+#about-us-section .svg-group .main-image .bottom-right {
+  background-image: url(/assets/update_image.png);
+}
+
+#impact-section .svg-group .main-image {
+  background-image: url(/assets/banner.png);
+}
+
+#impact-section .svg-group .main-image .top-right {
+  background-image: url(/assets/banner.png);
+}
+
 #beneficiaries-section .beneficiaries-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1429,7 +1450,8 @@ main {
 .svg-group .main-image .top-right, .svg-group .main-image .bottom-right, .svg-group .main-image {
   border: 2px solid black;
   border-radius: 50%;
-  background: #C8102E;
+  background-size: cover;
+  background-position: center;
 }
 
 .svg-group .main-image .top-right, .svg-group .main-image .bottom-right {
