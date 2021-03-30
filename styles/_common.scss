@@ -393,3 +393,14 @@ section.split-row {
     }
   }
 }
+
+.nav-item {
+  img {
+    height: 20px;
+    width: 20px;
+
+    &.reverse {
+      transform: rotate(180deg);
+    }
+  }
+}

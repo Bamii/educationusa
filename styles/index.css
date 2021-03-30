@@ -945,6 +945,16 @@ section.split-row.reverse {
   }
 }
 
+.nav-item img {
+  height: 20px;
+  width: 20px;
+}
+
+.nav-item img.reverse {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 main {
   padding: 0;
   max-width: unset;
@@ -1169,10 +1179,6 @@ main {
   }
 }
 
-#beneficiaries-section {
-  background: #F0EFEFB5;
-}
-
 #beneficiaries-section .beneficiaries-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1302,6 +1308,108 @@ main {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
+}
+
+#updates-section {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#updates-section .left {
+  overflow: hidden;
+}
+
+#updates-section .left .updates-navigation {
+  width: 100%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+#updates-section .left .updates-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+#updates-section .left .updates-container .update-details {
+  margin-right: 20px;
+  width: 70vw;
+  min-width: 70vw;
+  border: 1px solid #003865;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 760px) {
+  #updates-section .left .updates-container .update-details {
+    width: 15rem;
+    min-width: 15rem;
+  }
+}
+
+#updates-section .left .updates-container .update-details .update-image {
+  width: 100%;
+  height: 15rem;
+  background-image: url(/assets/update_image.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#updates-section .left .updates-container .update-details .update-text {
+  padding: 1rem;
+  text-align: left;
+}
+
+#updates-section .left .updates-container .update-details .update-text .update-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+
+#updates-section .left .updates-container .update-details .update-text .update-subtext {
+  font-size: small;
+}
+
+#updates-section .left .updates-container .update-details .read-more {
+  font-size: smaller;
+  text-align: right;
+}
+
+@media screen and (min-width: 760px) {
+  #updates-section .left {
+    width: 70%;
+  }
+}
+
+#updates-section .right {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#updates-section .right .medium-text {
+  font-size: 1.2rem;
+}
+
+#updates-section .right .read-more {
+  font-size: smaller;
+  text-align: right;
+}
+
+@media screen and (min-width: 760px) {
+  #updates-section .right {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 30%;
+  }
 }
 
 .svg-group {
@@ -1438,5 +1546,9 @@ main {
   .svg-group .right-part {
     left: 22rem;
   }
+}
+
+.solid-bg {
+  background: #F0EFEFB5;
 }
 /*# sourceMappingURL=index.css.map */
