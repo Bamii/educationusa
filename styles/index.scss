@@ -332,6 +332,10 @@ main {
           min-width: $img-width;
         }
 
+        &:hover {
+          border-width: 2px;
+        }
+
         .update-image {
           width: 100%;
           height: $img-width;

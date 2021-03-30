@@ -1375,6 +1375,10 @@ main {
   }
 }
 
+#updates-section .left .updates-container .update-details:hover {
+  border-width: 2px;
+}
+
 #updates-section .left .updates-container .update-details .update-image {
   width: 100%;
   height: 15rem;
