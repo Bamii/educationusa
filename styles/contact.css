@@ -4,7 +4,7 @@ header {
 
 header #top-strip-container {
   width: 100%;
-  z-index: 100000;
+  z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,14 +15,6 @@ header #top-strip-container {
   color: black;
   background: #F0EFEFB5;
   position: fixed;
-}
-
-header #top-strip-container img.default-logo {
-  display: block;
-}
-
-header #top-strip-container img.white-logo {
-  display: none;
 }
 
 @media screen and (min-width: 1024px) {
@@ -72,16 +64,12 @@ header #top-strip-container #top-strip #logo .icon {
 }
 
 header #top-strip-container #top-strip #logo img {
-  width: 100%;
-  height: auto;
+  height: 5rem;
+  width: auto;
 }
 
 @media screen and (min-width: 760px) {
   header #top-strip-container #top-strip #logo {
-    width: auto;
-  }
-  header #top-strip-container #top-strip #logo img {
-    height: 100%;
     width: auto;
   }
 }
@@ -250,6 +238,112 @@ header #menu-wrapper .mobile-menu-container .mobile-menu-links .mobile-menu-link
   margin: 0 0.2rem;
 }
 
+header #login-modal .mask .auth-container {
+  width: 90vw;
+}
+
+@media screen and (min-width: 760px) {
+  header #login-modal .mask .auth-container {
+    width: 50vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header #login-modal .mask .auth-container {
+    width: 40vw;
+  }
+}
+
+header #login-modal .mask .auth-container .auth-header {
+  padding: 0.5rem 2rem;
+  border-radius: 4px 4px 0 0;
+  background: #F0EFEF;
+  text-align: center;
+}
+
+header #login-modal .mask .auth-container .auth-header img {
+  height: 6rem;
+  width: auto;
+}
+
+header #login-modal .mask .auth-container .auth-body {
+  padding: 3rem 2rem;
+  border-radius: 0 0 4px 4px;
+  background: #fff;
+}
+
+header #login-modal .mask .auth-container .auth-body .auth-element {
+  display: none;
+}
+
+header #login-modal .mask .auth-container .auth-body .auth-element.active {
+  display: block;
+}
+
+header #login-modal .mask .auth-container .auth-body .input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 0;
+}
+
+header #login-modal .mask .auth-container .auth-body .input-container input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 4px 0 0 4px;
+  background: #F0EFEF;
+  border: none;
+  outline: #003865;
+  padding: 1rem;
+}
+
+header #login-modal .mask .auth-container .auth-body .input-container label {
+  padding: 0.5rem;
+  border-radius: 0 4px 4px 0;
+  color: white;
+  background: #003865;
+}
+
+header #login-modal .mask .auth-container .auth-body .forgot-password-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: small;
+}
+
+header #login-modal .mask .auth-container .auth-body .forgot-password-row .remember-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header #login-modal .mask .auth-container .auth-body .forgot-password-row .remember-me input[type="checkbox"] {
+  margin-right: 0.3rem;
+}
+
+header #login-modal .mask .auth-container .auth-body .login-button {
+  margin-top: 3rem;
+}
+
+header #login-modal .mask .auth-container .auth-body .extras {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+header #login-modal .mask .auth-container .auth-body .extras span {
+  cursor: pointer;
+}
+
 footer {
   background: #0f4665;
 }
@@ -317,8 +411,8 @@ footer {
   }
 }
 
-.footer-container .main-footer .logo {
-  width: 100%;
+.footer-container .main-footer .logo img {
+  height: 6rem;
 }
 
 .footer-container .main-footer .footer-links-section {
@@ -902,25 +996,18 @@ section.split-row.reverse {
 }
 
 .modal .mask {
-  padding-top: 9rem;
   width: 100%;
   height: 100%;
   position: relative;
-}
-
-@media screen and (min-width: 760px) {
-  .modal .mask {
-    padding: 10rem 0 0 0;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .modal .mask {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 6.7rem 0 0 0;
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .modal .mask .mask-close {

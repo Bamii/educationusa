@@ -2,6 +2,7 @@
   const menuWrapper = document.getElementById("menu-wrapper");
   const mobileMenu = document.getElementById("mobile-menu-button");
 
+  const 
   /* menu SHIT! */
   mobileMenu.onclick = function(e) {
     openMobileMenu(e);

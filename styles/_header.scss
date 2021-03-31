@@ -5,21 +5,13 @@ header {
 
   #top-strip-container {
     width: 100%;
-    z-index: 100000;
+    z-index: 1000;
     display: flex;
     justify-content: center;
     padding: 0 2rem;
     color: black;
     background: $transluscent-white; 
     position: fixed;
-
-    img.default-logo {
-      display: block;
-    }
-
-    img.white-logo {
-      display: none;
-    }
 
     &.transparent {
       @include minWidth($breakpoint-desktop) {
@@ -69,18 +61,18 @@ header {
         }
 
         img {
-          width: 100%;
-          height: auto;
+          height: 5rem;
+          width: auto;
         }
 
         @include minWidth($breakpoint-tablet) {
           // height: 6.8rem;
           width: auto;
 
-          img {
-            height: 100%;
-            width: auto;
-          }
+          // img {
+          //   height: 100%;
+          //   width: auto;
+          // }
         }
       }
 
@@ -213,6 +205,98 @@ header {
             content: "-";
             color: $white;
             margin: 0 0.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  #login-modal {
+    .mask {
+      .auth-container {
+        width: 90vw;
+
+        @include minWidth($breakpoint-tablet) {
+          width: 50vw;
+        }
+
+        @include minWidth($breakpoint-desktop) {
+          width: 40vw;
+        }
+
+        .auth-header {
+          padding: 0.5rem 2rem;
+          border-radius: 4px 4px 0 0;
+          background: $gray-bg;
+          text-align: center;
+
+          img {
+            height: 6rem;
+            width: auto;
+          }
+        }
+
+        .auth-body {
+          padding: 3rem 2rem;
+          border-radius: 0 0 4px 4px;
+          background: $white;
+
+          .auth-element {
+            display: none;
+            
+            &.active {
+              display: block;
+            }
+          }
+
+          .input-container {
+            display: flex;
+            padding: 1rem 0;
+            
+            input {
+              flex: 1;
+              border-radius: 4px 0 0 4px;
+              background: $gray-bg;
+              border: none;
+              outline: $primary-color;
+              padding: 1rem;
+            }
+
+            label {
+              padding: 0.5rem;
+              border-radius: 0 4px 4px 0;
+              color: white;
+              background: $primary-color;
+            }
+          }
+
+          .forgot-password-row {
+            .remember-me {
+              display: flex;
+              justify-content: center;
+
+              input[type="checkbox"] {
+                margin-right: 0.3rem;
+              }
+            }
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: small;
+          }
+
+          .login-button {
+            margin-top: 3rem;
+          }
+
+          .extras {
+            text-align: center;
+            margin: 0.5rem 0;
+
+            span {
+              cursor: pointer;
+            }
           }
         }
       }
