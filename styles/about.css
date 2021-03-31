@@ -1104,6 +1104,10 @@ section.split-row.reverse {
   color: #003865;
 }
 
+#about-section #about-tab-details .details-paragraph {
+  margin-top: 2rem;
+}
+
 #about-section #about-tab-details .details-paragraph p {
   padding: 0.8rem 0;
 }
