@@ -1342,6 +1342,7 @@ main {
 #beneficiaries-section .beneficiaries-list .beneficiary .beneficiary-image img {
   height: 100%;
   width: 100%;
+  position: inherit;
 }
 
 #beneficiaries-section .beneficiaries-list .beneficiary .beneficiary-image .image-tag {
@@ -1349,6 +1350,7 @@ main {
   height: 4rem;
   border-radius: 50%;
   position: absolute;
+  background: #C8102E;
 }
 
 #beneficiaries-section .beneficiaries-list .beneficiary .beneficiary-name {
