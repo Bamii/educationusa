@@ -191,26 +191,30 @@ main {
 
   .svg-group {
     .main-image {
-      background-image: url(/assets/home_banner_1.png);
+      background-image: url(/assets/svg4.png);
 
       .top-right {
-        background-image: url(/assets/update_image.png);
+        background-image: url(/assets/svg3.png);
       }
 
       .bottom-right {
-        background-image: url(/assets/update_image.png);
+        background-image: url(/assets/svg2.png);
       }
     }
+  }
+
+  .right {
+    align-items: flex-start;
   }
 }
 
 #impact-section {
   .svg-group {
     .main-image {
-      background-image: url(/assets/banner.png);
+      background-image: url(/assets/svg1.png);
 
       .top-right {
-        background-image: url(/assets/banner.png);
+        background-image: url(/assets/svg2.png);
       }
     }
   }
@@ -410,7 +414,7 @@ main {
   width: max-content;
 
   %svg-image {
-    border: 2px solid black;
+    // border: 2px solid black;
     border-radius: 50%;
     background-size: cover;
     background-position: center;
@@ -443,8 +447,8 @@ main {
     }
 
     @include minWidth($breakpoint-tablet) {
-      height: 20rem;
-      width: 20rem;
+      height: 21rem;
+      width: 21rem;
 
       .top-right {
         height: 12rem;
@@ -459,6 +463,11 @@ main {
         bottom: -3rem;
         right: -3rem;
       }
+    }
+
+    @include minWidth($breakpoint-desktop) {
+      height: 23rem;
+      width: 23rem;
     }
   }
 
