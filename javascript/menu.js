@@ -4,7 +4,7 @@
 
   const loginNavButton = document.getElementById('login-nav-btn');
   const loginModal = document.getElementById("login-modal")
-  const closeModal = document.getElementById('close-modal');
+  const closeModals = document.querySelectorAll('[data-close-modal]');
   const signUpBtn = document.getElementById('signup-btn')
   const loginBtn = document.getElementById('login-btn')
 
@@ -21,15 +21,18 @@
     toggleModal()
   }
 
-  closeModal.onclick = function() {
-    toggleModal()
-  }
+  Array.from(closeModals).forEach(closeModal => {
+    closeModal.onclick = function() {
+      toggleModal()
+    }
+  })
   
   function toggleModal() {
     loginModal.classList.toggle('visible');
   }
 
-  signUpBtn.onclick = function() {
-    
+  signUpBtn.onclick = function(el) {
+    document.querySelector('[data-auth-target="signin"]').classList.remove('active')
+    document.querySelector('[data-auth-target="signup"]').classList.add('active')
   }
 })()
