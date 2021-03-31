@@ -35,9 +35,9 @@ header #top-strip-container #top-strip {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
   padding: 2rem 0;
 }
@@ -64,7 +64,7 @@ header #top-strip-container #top-strip #logo .icon {
 }
 
 header #top-strip-container #top-strip #logo img {
-  height: 5rem;
+  height: 7rem;
   width: auto;
 }
 
@@ -114,7 +114,7 @@ header #top-strip-container #top-strip #navigation-wrapper .menu-links {
 }
 
 header #top-strip-container #top-strip #navigation-wrapper .menu-links .menu-link {
-  padding: 2.4rem 1.2rem 1.5rem 1.2rem;
+  padding: 2.5rem 1.2rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -128,11 +128,7 @@ header #top-strip-container #top-strip #navigation-wrapper .menu-links .menu-lin
   border-radius: 0 0 0.5rem 0.5rem;
 }
 
-header #top-strip-container #top-strip #navigation-wrapper .menu-links .menu-link:hover {
-  color: #C8102E;
-}
-
-header #top-strip-container #top-strip #navigation-wrapper .menu-links .menu-link.selected {
+header #top-strip-container #top-strip #navigation-wrapper .menu-links .menu-link.selected, header #top-strip-container #top-strip #navigation-wrapper .menu-links .menu-link:hover {
   background: #C8102E;
   color: #fff;
 }
@@ -344,11 +340,11 @@ header #login-modal .mask .auth-container .auth-body .extras span {
   cursor: pointer;
 }
 
-header #login-modal .mask .auth-container .auth-body #close-modal {
+header #login-modal .mask .auth-container .auth-body [data-close-modal] {
   text-align: right;
 }
 
-header #login-modal .mask .auth-container .auth-body #close-modal::after {
+header #login-modal .mask .auth-container .auth-body [data-close-modal]::after {
   content: "(x)";
 }
 
@@ -420,7 +416,7 @@ footer {
 }
 
 .footer-container .main-footer .logo img {
-  height: 6rem;
+  height: 10rem;
 }
 
 .footer-container .main-footer .footer-links-section {

@@ -54,11 +54,9 @@
                     Apply
                   </div>
                 </a>
-                <a href="#">
-                  <div data-menu-index="6" class="menu-link">
-                    Login
-                  </div>
-                </a>
+              <div id="login-nav-btn" data-menu-index="6" class="menu-link">
+                Login
+              </div>
               </div>
             </div>
           </div>
@@ -85,7 +83,74 @@
               <div data-mobile-menu-index="5" class="mobile-menu-link">
                 <a href="/application.html">Apply</a>
               </div>
-              <div data-mobile-menu-index="6" class="mobile-menu-link"><a href="">Login</a></div>
+              <div id="login-nav-btn" data-mobile-menu-index="6" class="mobile-menu-link">Login</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="login-modal" class="modal">
+        <div class="mask">
+          <div class="auth-container">
+            <div class="auth-header">
+              <img src="/assets/logo.svg" alt="EducationUSA Logo.">
+            </div>
+            <div class="auth-body">
+              <div id="sign-in" data-auth-target="signin" class="auth-element active">
+                <div class="input-container">
+                  <input type="text" name="email" id="" placeholder="Email Address">
+                  <label for="email"></label>
+                </div>
+                <div class="input-container">
+                  <input type="password" name="password" id="" placeholder="password">
+                  <label for="password"></label>
+                </div>
+                <div class="forgot-password-row">
+                  <div class="remember-me">
+                    <input type="checkbox" name="remember-me" id="remember-me">
+                    <label for="remember-me">Remember Me</label>
+                  </div>
+                  <div class="">
+                    <span class="accented-text">Forgot your password?</span>
+                  </div>
+                </div>
+                <div class="login-button btn solid">
+                  login
+                </div>
+                <div class="extras">
+                  Not a member? <span id="signup-btn" class="accented-text">Sign up now!</span>
+                </div>
+                <div data-close-modal="close-modal" class="close btn ">
+                  close modal
+                </div>
+              </div>
+              <div id="sign-up" data-auth-target="signup" class="auth-element">
+                <div class="input-container">
+                  <input type="text" name="email" id="" placeholder="Email Address">
+                  <label for="email"></label>
+                </div>
+                <div class="input-container">
+                  <input type="password" name="password" id="" placeholder="password">
+                  <label for="password"></label>
+                </div>
+                <div class="input-container">
+                  <input type="password" name="reenter-password" id="" placeholder="Reenter password">
+                  <label for="reenter-password"></label>
+                </div>
+                <div class="input-container">
+                  <input type="text" name="password" id="" placeholder="Registration Location">
+                  <label for="location"></label>
+                </div>
+                <div class="login-button btn solid">
+                  signup
+                </div>
+                <div class="extras">
+                  Alredy a member? <span id="signin-btn" class="accented-text">Sign in now!</span>
+                </div>
+                <div data-close-modal="close-modal" class="close btn">
+                  close modal
+                </div>
+              </div>
             </div>
           </div>
         </div>

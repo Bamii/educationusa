@@ -36,7 +36,17 @@ main {
 
       [data-slide="0"] {
         @extend %banner-position;
-        background-image: url(/assets/home_banner_1.png);
+        background-image: url(/assets/banner1.png);
+      }
+
+      [data-slide="1"] {
+        @extend %banner-position;
+        background-image: url(/assets/banner2.png);
+      }
+
+      [data-slide="2"] {
+        @extend %banner-position;
+        background-image: url(/assets/banner3.png);
       }
 
       .banner-slide-container {
