@@ -237,8 +237,20 @@ main {
       .beneficiary-image {
         height: 12rem;
         width: 12rem;
-        border: 1px solid black;
         border-radius: 50%;
+        position: relative;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+
+        .image-tag {
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          position: absolute;
+        }
       }
 
       .beneficiary-name {

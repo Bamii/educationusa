@@ -1335,8 +1335,20 @@ main {
 #beneficiaries-section .beneficiaries-list .beneficiary .beneficiary-image {
   height: 12rem;
   width: 12rem;
-  border: 1px solid black;
   border-radius: 50%;
+  position: relative;
+}
+
+#beneficiaries-section .beneficiaries-list .beneficiary .beneficiary-image img {
+  height: 100%;
+  width: 100%;
+}
+
+#beneficiaries-section .beneficiaries-list .beneficiary .beneficiary-image .image-tag {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  position: absolute;
 }
 
 #beneficiaries-section .beneficiaries-list .beneficiary .beneficiary-name {
