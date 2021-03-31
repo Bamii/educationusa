@@ -298,6 +298,14 @@ header {
               cursor: pointer;
             }
           }
+
+          #close-modal {
+            text-align: right;
+
+            &::after {
+              content: "(x)";
+            }
+          }
         }
       }
     }

@@ -344,6 +344,14 @@ header #login-modal .mask .auth-container .auth-body .extras span {
   cursor: pointer;
 }
 
+header #login-modal .mask .auth-container .auth-body #close-modal {
+  text-align: right;
+}
+
+header #login-modal .mask .auth-container .auth-body #close-modal::after {
+  content: "(x)";
+}
+
 footer {
   background: #0f4665;
 }
