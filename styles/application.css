@@ -35,11 +35,11 @@ header #top-strip-container #top-strip {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 header #top-strip-container #top-strip #logo {
@@ -64,13 +64,16 @@ header #top-strip-container #top-strip #logo .icon {
 }
 
 header #top-strip-container #top-strip #logo img {
-  height: 7rem;
+  height: 4rem;
   width: auto;
 }
 
 @media screen and (min-width: 760px) {
   header #top-strip-container #top-strip #logo {
     width: auto;
+  }
+  header #top-strip-container #top-strip #logo img {
+    height: 7rem;
   }
 }
 
@@ -200,6 +203,9 @@ header #top-strip-container #top-strip #navigation-wrapper .extra-menu-links-wra
 
 @media screen and (min-width: 1024px) {
   header #top-strip-container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     padding: 0 10rem;
   }
   header #top-strip-container #top-strip {

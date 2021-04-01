@@ -27,9 +27,9 @@ header {
     #top-strip {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
       width: 100%;
-      padding: 2rem 0;
+      padding: 1rem 0;
 
       #logo {
         width: 50%;
@@ -52,7 +52,7 @@ header {
         }
 
         img {
-          height: 7rem;
+          height: 4rem;
           width: auto;
         }
 
@@ -64,6 +64,10 @@ header {
           //   height: 100%;
           //   width: auto;
           // }
+
+          img {
+            height: 7rem;
+          }
         }
       }
 
@@ -167,6 +171,7 @@ header {
     }
 
     @include minWidth($breakpoint-desktop) {
+      align-items: flex-start;
       padding: 0 10rem;
 
       #top-strip {
