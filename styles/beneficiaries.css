@@ -993,6 +993,7 @@ section.split-row.reverse {
 .modal {
   display: none;
   z-index: 10000;
+  position: relative;
 }
 
 .modal.visible {
@@ -1005,6 +1006,17 @@ section.split-row.reverse {
   height: 100vh;
   width: 100%;
   background: rgba(16, 17, 20, 0.8);
+}
+
+.modal .modal-close {
+  position: absolute;
+  padding: 0.5rem;
+  background: #C8102E;
+  top: 1rem;
+  right: 1rem;
+  color: #fff;
+  border-radius: 0.25rem;
+  cursor: pointer;
 }
 
 .modal .mask {
@@ -1137,5 +1149,36 @@ section.split-row.reverse {
 .beneficiary .beneficiary-details .read-more::after {
   content: none;
   padding: 0;
+}
+
+#beneficiary-details-modal {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#beneficiary-details-modal section {
+  max-width: 90rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media screen and (min-width: 760px) {
+  #beneficiary-details-modal section {
+    max-width: 70rem;
+  }
+}
+
+#beneficiary-details-modal section .right {
+  background: #F0EFEF;
+  padding: 2rem;
+}
+
+#beneficiary-details-modal section .right p {
+  padding-bottom: 1rem;
 }
 /*# sourceMappingURL=beneficiaries.css.map */

@@ -77,3 +77,26 @@
     }
   }
 }
+
+#beneficiary-details-modal {
+  align-items: center;
+  justify-content: center;
+
+  section {
+    max-width: 90rem;
+    align-items: flex-start;
+
+    @include minWidth($breakpoint-tablet) {
+      max-width: 70rem;
+    }
+
+    .right {
+      background: $gray-bg;
+      padding: 2rem;
+
+      p {
+        padding-bottom: 1rem;
+      }
+    }
+  }
+}
