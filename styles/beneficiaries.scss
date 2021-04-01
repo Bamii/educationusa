@@ -1,0 +1,79 @@
+@import "header";
+@import "footer";
+@import "common";
+@import "variables";
+
+#beneficiaries-search {
+  padding-bottom: 1rem;
+
+  .input-container {
+    input {
+      width: 100%;
+      border-radius: 4px 0 0 4px;
+      border: 1px solid $primary-color;
+      padding: 1rem;
+    }
+
+    .btn {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+}
+
+#beneficiaries-list-section {
+  padding-top: 1rem;
+
+  .beneficiaries-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+  
+
+  }
+}
+.beneficiary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  background: $primary-color;
+  border-radius: 4px;
+  width: 12rem;
+  margin: 1rem;
+
+  .beneficiary-image {
+    height: 10rem;
+    width: 10rem;
+    background: $gray-bg;
+    border-radius: 50%;
+  }
+
+  .beneficiary-details {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    background: $secondary-color;
+    color: white;
+    margin: 1rem 0;
+    cursor: pointer;
+
+    div {
+      padding: 0;
+    }
+
+    .beneficiary-name {
+      font-size: 1.5rem;
+    }
+
+    .read-more {
+      color: white;
+      text-align: center;
+      font-size: x-small;
+
+      &::after {
+        content: none;
+        padding: 0;
+      }
+    }
+  }
+}
