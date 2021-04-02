@@ -181,28 +181,42 @@ header {
 
   #menu-wrapper {
     .mobile-menu-container {
-      padding: 8rem 2rem 2rem 2rem;
       background: $transluscent-white;
       width: 100%;
+      position: relative;
 
-      .mobile-menu-links {
-        text-align: center;
+      #mobile-menu-close {
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+      }
 
-        .mobile-menu-link {
-          padding: 0.8rem 0;
-          font-size: 1.5rem;
-          text-transform: uppercase;
-          color: $primary-color;
+      .mobile-menu-links-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-          &:visited {
-            color: $white;
-          }
-
-          &::after,
-          &::before {
-            content: "-";
-            color: $white;
-            margin: 0 0.2rem;
+        .mobile-menu-links {
+          text-align: center;
+  
+          .mobile-menu-link {
+            padding: 0.8rem 0;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: $primary-color;
+  
+            &:visited {
+              color: $white;
+            }
+  
+            &::after,
+            &::before {
+              content: "-";
+              color: $white;
+              margin: 0 0.2rem;
+            }
           }
         }
       }

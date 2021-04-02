@@ -31,6 +31,7 @@
 
   }
 }
+
 .beneficiary {
   display: flex;
   flex-direction: column;
@@ -38,8 +39,12 @@
   padding: 1rem 0;
   background: $primary-color;
   border-radius: 4px;
-  width: 12rem;
+  width: 16rem;
   margin: 1rem;
+
+  @include minWidth($breakpoint-tablet) {
+    width: 14rem;
+  }
 
   .beneficiary-image {
     height: 10rem;
@@ -79,24 +84,44 @@
 }
 
 #beneficiary-details-modal {
-  align-items: center;
   justify-content: center;
+  padding: 3rem;
+  overflow: scroll;
 
-  section {
-    max-width: 90rem;
-    align-items: flex-start;
+  // .mask {
 
     @include minWidth($breakpoint-tablet) {
-      max-width: 70rem;
+      align-items: center;
     }
 
-    .right {
-      background: $gray-bg;
-      padding: 2rem;
+    section {
+      max-width: 90rem;
+      align-items: flex-start;
+  
+      @include minWidth($breakpoint-tablet) {
+        max-width: 70rem;
+      }
+  
+      .left {
+        align-self: center;
 
-      p {
-        padding-bottom: 1rem;
+        @include minWidth($breakpoint-tablet) {
+          align-self: flex-start;
+        }
+
+        .beneficiary {
+          width: 100%;
+        }
+      }
+
+      .right {
+        background: $gray-bg;
+        padding: 2rem;
+  
+        p {
+          padding-bottom: 1rem;
+        }
       }
     }
-  }
+  // }
 }
